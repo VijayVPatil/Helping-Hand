@@ -15,7 +15,7 @@ type DbServer struct {
 func (dbs *DbServer) NewServer(DbStore store.DbConnect) {
 
 	util.SetLogger()
-	util.Logger.Infof("Logger setup done.....\n")
+	util.Logger.Infof("Logger setup done.....")
 	//Calling ConnectDB() method via interface from store package
 	dbs.DBConnection = &DbStore
 	err := dbs.DBConnection.ConnectDB()

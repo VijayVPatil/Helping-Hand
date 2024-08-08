@@ -14,7 +14,12 @@ func init() {
 
 	Logger = *logrus.New()
 
-	Logger.Out = os.Stdout
+	logrus.SetFormatter(&logrus.TextFormatter{
+		FullTimestamp: true,
+		// Customizing delimiters
+	})
+
+	Logger.SetOutput(os.Stdout)
 }
 
 func SetLogger() {
